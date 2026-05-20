@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/accessibility/accessibility.css" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+
+    <title>Доступність | PinkWave Новини</title>
+  </head>
+
+  <body>
+    <!-- =========================================
+         ШАПКА САЙТУ
+    ========================================== -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="/img/82445989-930d-425c-b607-39a3894f5215.png" alt="Logo" />
+        </div>
+
+        <nav class="navbar">
+          <ul class="header_list">
+            <li><a href="/index.html" class="list_link">Головна</a></li>
+            <li><a href="/about/about.html" class="list_link">Про нас</a></li>
+            <li>
+              <a href="/resources/resources.html" class="list_link">Ресурси</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="/Autorization_blank/authorization.html" class="btn">Вхід</a>
+      </div>
+    </header>
+
+    <!-- =========================================
+         HERO-СЕКЦІЯ
+    ========================================== -->
+    <main class="acc-hero">
+      <div class="container">
+        <h1>Доступність</h1>
+        <p>Ми прагнемо зробити сайт зручним для всіх користувачів</p>
+      </div>
+    </main>
+
+    <!-- =========================================
+         ОСНОВНИЙ КОНТЕНТ
+    ========================================== -->
+    <section class="acc-section">
+      <div class="container acc-box">
+        <h2>1. Загальний підхід</h2>
+        <p>
+          PinkWave Новини розроблений так, щоб бути доступним для максимально
+          широкої аудиторії незалежно від пристрою або можливостей користувача.
+        </p>
+
+        <h2>2. Зручність читання</h2>
+        <p>
+          Ми використовуємо контрастні кольори, читабельні шрифти та адаптивний
+          дизайн для комфортного сприйняття контенту.
+        </p>
+
+        <h2>3. Навігація</h2>
+        <p>
+          Сайт має просту структуру меню, що дозволяє швидко знаходити потрібні
+          розділи без зайвих дій.
+        </p>
+
+        <h2>4. Адаптивність</h2>
+        <p>
+          Весь контент автоматично підлаштовується під мобільні пристрої,
+          планшети та різні розміри екранів.
+        </p>
+
+        <h2>5. Підтримка</h2>
+        <p>
+          Якщо у вас виникають труднощі з використанням сайту, ви можете
+          звернутися до нас через розділ “Контакти”.
+        </p>
+
+        <div class="back">
+          <a href="/index.html" class="btn_back">Повернутись на головну</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================
+         ВІДЖЕТ ПІДТРИМКИ ЧАТУ
+    ========================================== -->
+    <div class="ai-chat" id="aiChat">
+      <div class="ai-header">
+        <span>Підтримка</span>
+        <button id="aiToggle">×</button>
+      </div>
+
+      <div class="ai-body">
+        <!-- FAQ -->
+        <div class="ai-faq" id="aiFaq"></div>
+
+        <!-- Повідомлення -->
+        <div class="ai-messages" id="aiMessages"></div>
+      </div>
+
+      <div class="ai-input">
+        <input id="aiInput" placeholder="Напишіть питання..." />
+        <button id="aiSend">➤</button>
+      </div>
+    </div>
+
+    <!-- Плаваюча кнопка -->
+    <button class="ai-fab" id="aiFab">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M12 3C6.5 3 2 6.6 2 11c0 2.7 1.7 5.2 4.5 6.7L6 21l3.8-2.1c.7.1 1.4.2 2.2.2 5.5 0 10-3.6 10-8s-4.5-8-10-8z"
+          fill="white"
+        />
+      </svg>
+    </button>
+
+    <!-- Скрипт -->
+    <script type="module" src="/resources/chat.js"></script>
+  </body>
+</html>

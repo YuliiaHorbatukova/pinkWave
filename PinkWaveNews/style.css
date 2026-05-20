@@ -1,0 +1,1222 @@
+/* ======================================================
+   Імпорт шрифтів
+====================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap');
+
+/* ======================================================
+   Загальні стилі
+====================================================== */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    color: #000;
+    background: #f1f1f1;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Скидання відступів для заголовків */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Скидання відступів для параграфів */
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Стилі посилань */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Стилі списків */
+ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Контейнер для обмеження ширини сторінки */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ======================================================
+   Кнопки
+====================================================== */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 180px;
+    padding: 12px 20px;
+
+    background-color: #9e687e;
+    border-radius: 15px;
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #111;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Вторинна кнопка з обводкою */
+.btn_second {
+    width: 100%;
+    max-width: 100px;
+    padding: 12px 20px;
+
+    border: grey 1px solid;
+    border-radius: 15px;
+    cursor: pointer;
+
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn_second:hover {
+    background-color: #111;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ======================================================
+   Хедер (верхня навігація)
+====================================================== */
+.header {
+    background-color: #57444c;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.list_link:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   ПРОФІЛЬ
+========================================= */
+
+.header-user-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-box {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+
+    background: #9e687e;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 18px;
+
+    overflow: hidden;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* =========================================
+   МОДАЛЬНЕ ВІКНО ПРОФІЛЮ
+========================================= */
+
+.profile-modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999999;
+}
+
+.profile-modal-content {
+    width: 100%;
+    max-width: 500px;
+
+    background: #fff;
+    border-radius: 24px;
+
+    padding: 30px;
+
+    position: relative;
+}
+
+.profile-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    border: none;
+    background: transparent;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.profile-modal-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.profile-big-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+
+    background-color: #9e687e;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+}
+
+.profile-big-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-modal-top h2 {
+    margin-bottom: 8px;
+}
+
+.profile-modal-top p {
+    color: #666;
+}
+
+.profile-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.profile-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-field input {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.save-profile-btn {
+    border: none;
+
+    background: #9e687e;
+    color: #fff;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.save-profile-btn:hover {
+    background: #111;
+}
+
+/* ======================================================
+   Випадаючий фільтр
+====================================================== */
+
+.dropdown {
+    position: relative;
+}
+
+/* ЗАГОЛОВОК ФІЛЬТРА */
+
+.dropdown-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #fff;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* Стрілка */
+.dropdown-title::after {
+    content: "▼";
+    font-size: 10px;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+/* Ховер */
+.dropdown:hover .dropdown-title {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+/* Поворот стрілки */
+.dropdown:hover .dropdown-title::after {
+    transform: rotate(180deg);
+}
+
+/* ======================================================
+   Меню випадаючого списку
+====================================================== */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 10px);
+    left: 0;
+
+    min-width: 240px;
+
+    background: #57444c;
+
+    border-radius: 14px;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: 0.3s ease;
+
+    z-index: 1000;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ======================================================
+   АКТИВНИЙ ФІЛЬТР
+====================================================== */
+
+.filter-option.active {
+    background: rgba(255, 255, 255, 0.18);
+    border-left: 3px solid #d36c9c;
+}
+
+/* ======================================================
+   Кнопки фільтра
+====================================================== */
+
+.filter-option {
+    width: 100%;
+
+    border: none;
+    background: transparent;
+
+    color: #fff;
+
+    text-align: left;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    font-size: 14px;
+}
+
+.filter-option:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* ======================================================
+   Головна секція (hero)
+====================================================== */
+.main {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    background-color: #423238;
+    color: #fff;
+}
+
+.main .container {
+    width: 100%;
+    text-align: center;
+}
+
+.main_title {
+    font-size: clamp(34px, 6vw, 60px);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    letter-spacing: 0.06em;
+}
+
+.main_subtitle {
+    font-size: clamp(14px, 2vw, 18px);
+    line-height: 1.6;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* ======================================================
+   Інформаційна секція
+====================================================== */
+.informed {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background-color: #57444c;
+}
+
+.informed .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Картка */
+.informed-card {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    height: 520px;
+    background-image: url("/img/informed.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+/* Контент поверх фону */
+.informed-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.informed-content h2 {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+}
+
+.informed-content p {
+    max-width: 720px;
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* ======================================================
+   Новини
+====================================================== */
+.news {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 120px;
+    padding: 40px 20px;
+}
+
+.news_text {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #d36c9c;
+}
+
+.news_title {
+    font-size: clamp(40px, 5.5vw, 64px);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 18px;
+    line-height: 1.15;
+}
+
+.news_desc {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6b6b6b;
+}
+
+.comments-container {
+    margin-top: 15px;
+    padding: 12px;
+    background: #3f2f36;
+    border-radius: 10px;
+}
+
+/* =========================
+   КОМЕНТАРІ
+========================= */
+
+.comments-container {
+    margin-top: 14px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+}
+
+/* =========================
+   ОДИН КОМЕНТАР
+========================= */
+
+.comment {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background 0.2s ease;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+/* =========================
+   АВТОР
+========================= */
+
+.comment-author {
+    font-size: 12px;
+    opacity: 0.75;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* =========================
+   ТЕКСТ
+========================= */
+
+.comment-text {
+    font-size: 14px;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+/* =========================
+   ДІЇ (відповідь/редагування/видалення)
+========================= */
+
+.comment-actions {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.comment-actions button {
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+.comment-actions button:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   ПОЛЕ ВВОДУ
+========================= */
+
+.comment-input-wrap {
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.comment-input-wrap input {
+    flex: 1;
+    padding: 9px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.15);
+    color: #fff;
+    outline: none;
+}
+
+.comment-input-wrap input:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.comment-input-wrap button {
+    padding: 9px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+.comment-input-wrap button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================
+   ГОСТЬОВЕ ПОВІДОМЛЕННЯ
+========================= */
+
+.comment-guest {
+    font-size: 13px;
+    opacity: 0.6;
+    padding: 6px 0;
+}
+
+/* =========================
+   КНОПКА КАРТКИ
+========================= */
+
+.card-actions {
+    margin-top: 12px;
+}
+
+.open-comments {
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+.open-comments:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+/* ======================================================
+   Карточки новин
+====================================================== */
+.news-list {
+    margin-top: 80px;
+}
+
+.news-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.news-card {
+    width: 100%;
+    max-width: 800px;
+    background-color: #57444c;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.news-card .media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 250px;
+    overflow: hidden;
+}
+
+.news-card img,
+.news-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.news-card .content {
+    padding: 26px;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.card-desc {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Мета-дані новини (категорія та дата) */
+.news-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+.news-category {
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: 600;
+}
+
+.news-date {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* ======================================================
+   Публікація
+====================================================== */
+.publish {
+    margin-top: 85px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.publish .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.publish_title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+}
+
+.publish_desc {
+    max-width: 600px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.publish .btn {
+    margin-top: 10px;
+}
+
+/* ======================================================
+   Футер
+====================================================== */
+.footer {
+    margin-top: 120px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+}
+
+/* Верхня частина футера */
+.footer_top {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 80px 15px;
+}
+
+/* Ліва частина */
+.footer_left {
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.footer_logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer_logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.footer_block h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.footer_block p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.footer_socials {
+    display: flex;
+    gap: 14px;
+}
+
+.footer_socials a {
+    font-size: 14px;
+    color: #000;
+    transition: opacity 0.3s ease;
+}
+
+.footer_socials a:hover {
+    opacity: 0.6;
+}
+
+/* Праві посилання */
+.footer_links {
+    display: flex;
+    gap: 120px;
+}
+
+.footer_links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer_links a {
+    font-size: 15px;
+    color: #000;
+    transition: opacity 0.3s ease;
+}
+
+.footer_links a:hover {
+    opacity: 0.6;
+}
+
+/* Нижня частина футера */
+.footer_bottom {
+    border-top: 1px solid #ddd;
+}
+
+.footer_bottom_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.footer_bottom_links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer_bottom_links a {
+    color: #555;
+    transition: opacity 0.3s ease;
+}
+
+.footer_bottom_links a:hover {
+    opacity: 0.6;
+}
+
+/* ======================================================
+   Бургер-меню (мобільне)
+====================================================== */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* ===== AI CHAT WIDGET ===== */
+
+.ai-fab {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+
+    background: #111;
+    color: #fff;
+
+    border: none;
+    cursor: pointer;
+
+    font-weight: bold;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.25s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.ai-chat {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+
+    width: 340px;
+    height: 480px;
+
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
+
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+
+    transform: scale(0.98);
+    transition: 0.25s ease;
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+}
+
+.ai-chat[style*="flex"] {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.ai-header {
+    background: #111;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ai-header button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.ai-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 13px;
+}
+
+.ai-msg {
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    max-width: 85%;
+}
+
+.user {
+    background: #9e687e;
+    color: #fff;
+    margin-left: auto;
+}
+
+.bot {
+    background: #eee;
+    color: #000;
+}
+
+.ai-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.ai-input input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.ai-input button {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 0 14px;
+    cursor: pointer;
+}
+
+.ai-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* FAQ блок */
+.ai-faq {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* FAQ кнопки */
+.ai-faq button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background: #eee;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.2s;
+}
+
+.ai-faq button:hover {
+    background: #ddd;
+}
+
+.ai-fab:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    background: #9e687e;
+}
+
+/* cookie */
+.cookie-banner {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+}
+
+.cookie-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 280px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cookie-box h3 {
+    margin: 0;
+}
+
+.cookie-box label {
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cookie-buttons button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#acceptAll {
+    background: #9e687e;
+    color: #fff;
+}
+
+#saveChoice {
+    background: #eee;
+}
+
+/* ======================================================
+   Адаптивні стилі для мобільних
+====================================================== */
+@media (max-width: 768px) {
+
+    .burger {
+        display: flex;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #57444c;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .header_list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    /* Зменшення кнопки на мобільних */
+    .header-btn {
+        max-width: 120px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}

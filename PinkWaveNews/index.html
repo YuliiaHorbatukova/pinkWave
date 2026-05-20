@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+    <title>PinkWave Новини</title>
+  </head>
+  <body>
+    <!-- Шапка сайту -->
+    <header class="header">
+      <div class="container">
+        <!-- Бургер меню -->
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="navbar">
+          <ul class="header_list">
+            <li class="list_item">
+              <a href="/about/about.html" class="list_link">Про нас</a>
+            </li>
+
+            <li class="list_item">
+              <a href="/resources/resources.html" class="list_link">Ресурси</a>
+            </li>
+
+            <!-- Випадаючий фільтр -->
+            <li class="list_item dropdown">
+              <span class="list_link dropdown-title"> Фільтр </span>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <button class="filter-option" data-category="all">
+                    Всі новини
+                  </button>
+                </li>
+
+                <li>
+                  <button class="filter-option" data-category="Політика">
+                    Політика
+                  </button>
+                </li>
+
+                <li>
+                  <button class="filter-option" data-category="Економіка">
+                    Економіка
+                  </button>
+                </li>
+
+                <li>
+                  <button
+                    class="filter-option"
+                    data-category="Соціальні проблеми"
+                  >
+                    Соціальні проблеми
+                  </button>
+                </li>
+
+                <li>
+                  <button class="filter-option" data-category="Культура">
+                    Культура
+                  </button>
+                </li>
+
+                <li>
+                  <button class="filter-option" data-category="Спорт">
+                    Спорт
+                  </button>
+                </li>
+
+                <li>
+                  <button class="filter-option" data-category="Наука">
+                    Наука
+                  </button>
+                </li>
+
+                <li>
+                  <button class="filter-option" data-category="Технології">
+                    Технології
+                  </button>
+                </li>
+
+                <li>
+                  <button class="filter-option" data-category="Розваги">
+                    Розваги
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="logo">
+          <img src="/img/82445989-930d-425c-b607-39a3894f5215.png" alt="Logo" />
+        </div>
+
+        <div class="header-user-area">
+          <a
+            href="/Autorization_blank/authorization.html"
+            class="btn"
+            id="headerAuthBtn"
+          >
+            Вхід
+          </a>
+
+          <!-- Профіль -->
+          <div class="profile-box" id="profileBox">
+            <div class="profile-avatar" id="profileAvatar">P</div>
+
+            <span class="profile-name" id="profileName"> Profile </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Головна секція -->
+    <main class="main">
+      <div class="container">
+        <h1 class="main_title">PinkWave Новини</h1>
+        <p class="main_subtitle">
+          Відбірні новини, тренди та аналітика сучасного цифрового світу
+        </p>
+
+        <a
+          href="/Autorization_blank/authorization.html"
+          class="btn_second"
+          id="heroAuthBtn"
+        >
+          Вхід
+        </a>
+      </div>
+    </main>
+
+    <!-- Інформаційний блок -->
+    <div class="informed">
+      <div class="container">
+        <div class="informed-card">
+          <div class="informed-overlay"></div>
+
+          <div class="informed-content">
+            <h2>Будьте в курсі з PinkWave Новини</h2>
+            <p>
+              Чиста та сучасна система управління новинами, створена для
+              академічної досконалості. Читайте останні новини з політики,
+              економіки, культури, спорту, науки, технологій та розваг. Всі
+              матеріали публікуються точно та уважно.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Секція новин -->
+    <section class="news">
+      <div class="container">
+        <span class="news_text">Новини</span>
+        <h2 class="news_title">Що відбувається зараз</h2>
+        <p class="news_desc">Останні новини, оновлюються щодня</p>
+      </div>
+    </section>
+
+    <!-- Секція карток новин -->
+    <section class="news-list">
+      <div class="container">
+        <div class="news-grid" id="newsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Секція публікації -->
+    <div class="publish">
+      <div class="container">
+        <h3 class="publish_title">Готові опублікувати свою історію</h3>
+        <p class="publish_desc">
+          Редактори можуть створювати, керувати та публікувати новини через нашу
+          панель.
+        </p>
+        <a
+          href="/Autorization_blank/authorization.html"
+          class="btn"
+          id="publishBtn"
+        >
+          Почати публікацію
+        </a>
+      </div>
+    </div>
+
+    <!-- Підвал -->
+    <footer class="footer">
+      <div class="container footer_top">
+        <!-- Ліва частина -->
+        <div class="footer_left">
+          <div class="footer_logo">
+            <img
+              src="/img/82445989-930d-425c-b607-39a3894f5215.png"
+              alt="Logo"
+            />
+          </div>
+
+          <!-- Адреса компанії -->
+          <div class="footer_block">
+            <h4>Адреса</h4>
+            <p>Поверх 1, вул. Прикладна 12, Сідней NSW 2000</p>
+          </div>
+
+          <!-- Контакти -->
+          <div class="footer_block">
+            <h4>Контакти</h4>
+            <p>1800 123 456</p>
+            <p>news@pinkwave.edu</p>
+          </div>
+
+          <!-- Соціальні мережі -->
+          <div class="footer_socials">
+            <!-- Facebook -->
+            <a href="#!">
+              <svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"
+                />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="#!"
+              ><svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 11C3 7.22876 3 5.34315 4.17157 4.17157C5.34315 3 7.22876 3 11 3H13C16.7712 3 18.6569 3 19.8284 4.17157C21 5.34315 21 7.22876 21 11V13C21 16.7712 21 18.6569 19.8284 19.8284C18.6569 21 16.7712 21 13 21H11C7.22876 21 5.34315 21 4.17157 19.8284C3 18.6569 3 16.7712 3 13V11Z"
+                  stroke="#33363F"
+                  stroke-width="2"
+                />
+                <circle cx="16.5" cy="7.5" r="1.5" fill="#33363F" />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="3"
+                  stroke="#33363F"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
+            <!-- Telegram -->
+            <a href="#!"
+              ><svg
+                width="24px"
+                height="24px"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16-7.163 16-16 16zM14.116 6.01v3.919l1.88 1.963V6.009h-1.88zM6.01 7.992l7.638 7.723c-.121.129-.245.256-.37.381l-7.268 7.35h3.67c.155-.003.312.01.467-.01.272-.003.543.005.814-.003.314-.32.622-.646.934-.97l2.677-2.795c.473-.5.955-.993 1.425-1.493.22.218.432.448.648.672.973 1.014 1.942 2.032 2.915 3.044.495.513.984 1.03 1.48 1.542.272.01.546-.002.82.006.096.013.195.007.294.007h3.83l-.69-.696-6.772-6.846c-.052-.066-.114-.127-.172-.189.237-.246.48-.491.723-.734 2.304-2.328 4.605-4.66 6.91-6.99h-4.938c-.713.744-1.425 1.489-2.14 2.23-.967 1.012-1.935 2.028-2.906 3.037-1.677-1.76-3.361-3.511-5.038-5.266H6.01zM16 19.53h.002c-.004 1.967-.004 3.933-.004 5.9h1.89c0-1.308.004-2.613 0-3.92-.627-.661-1.262-1.317-1.888-1.98z"
+                />
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="#!"
+              ><svg
+                fill="#000000"
+                height="24px"
+                width="24px"
+                version="1.1"
+                id="Icons"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 32 32"
+                xml:space="preserve"
+              >
+                <path
+                  d="M23,0H9C4,0,0,4,0,9v14c0,5,4,9,9,9h14c5,0,9-4,9-9V9C32,4,28,0,23,0z M12,25c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V13
+ c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V25z M9,11c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S10.7,11,9,11z M26,25c0,0.6-0.4,1-1,1h-3
+ c-0.6,0-1-0.4-1-1v-3.5v-1v-2c0-0.8-0.7-1.5-1.5-1.5S18,17.7,18,18.5v2v1V25c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V13
+ c0-0.6,0.4-1,1-1h4c0.3,0,0.5,0.1,0.7,0.3c0.6-0.2,1.2-0.3,1.8-0.3c3,0,5.5,2.5,5.5,5.5V25z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Праві посилання -->
+        <div class="footer_links">
+          <ul>
+            <li><a href="/about/about.html">Про нас</a></li>
+            <li><a href="#!">Категорії</a></li>
+            <li>
+              <a href="/Autorization_blank/authorization.html"
+                >Вхід редактора</a
+              >
+            </li>
+            <li><a href="/contacts/contacts.html">Контакти</a></li>
+          </ul>
+
+          <ul>
+            <li>
+              <a href="/privacy/privacy.html">Політика конфіденційності</a>
+            </li>
+            <li><a href="/terms/terms.html">Умови використання</a></li>
+            <li><a href="/accessibility/accessibility.html">Доступність</a></li>
+            <li><a href="/sitemap/sitemap.html">Карта сайту</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Нижня частина підвалу -->
+      <div class="footer_bottom">
+        <div class="container footer_bottom_inner">
+          <span>© 2025 PinkWave Новини. Всі права захищені.</span>
+
+          <div class="footer_bottom_links">
+            <a href="/privacy/privacy.html">Політика конфіденційності</a>
+            <a href="#" id="cookieSettings">Налаштування cookie</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Віджет чату підтримки -->
+    <div class="ai-chat" id="aiChat">
+      <div class="ai-header">
+        <span>Підтримка</span>
+        <button id="aiToggle">×</button>
+      </div>
+
+      <div class="ai-body">
+        <!-- FAQ -->
+        <div class="ai-faq" id="aiFaq"></div>
+
+        <!-- Повідомлення -->
+        <div class="ai-messages" id="aiMessages"></div>
+      </div>
+
+      <div class="ai-input">
+        <input id="aiInput" placeholder="Напишіть питання..." />
+        <button id="aiSend">➤</button>
+      </div>
+    </div>
+
+    <!-- Плаваюча кнопка -->
+    <button class="ai-fab" id="aiFab">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M12 3C6.5 3 2 6.6 2 11c0 2.7 1.7 5.2 4.5 6.7L6 21l3.8-2.1c.7.1 1.4.2 2.2.2 5.5 0 10-3.6 10-8s-4.5-8-10-8z"
+          fill="white"
+        />
+      </svg>
+    </button>
+
+    <div class="cookie-banner" id="cookieBanner">
+      <div class="cookie-box">
+        <h3>Cookies</h3>
+
+        <p>Ми використовуємо cookies для покращення роботи сайту.</p>
+
+        <label>
+          <input type="checkbox" id="analytics" />
+          Аналітика
+        </label>
+
+        <label>
+          <input type="checkbox" id="marketing" />
+          Маркетинг
+        </label>
+
+        <div class="cookie-buttons">
+          <button id="acceptAll">Прийняти всі</button>
+          <button id="saveChoice">Зберегти</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модальне вікно профілю -->
+    <div class="profile-modal" id="profileModal">
+      <div class="profile-modal-content">
+        <button class="profile-close" id="closeProfileModal">×</button>
+
+        <div class="profile-modal-top">
+          <label for="avatarInput" class="profile-big-avatar" id="bigAvatar">
+            P
+          </label>
+
+          <input type="file" id="avatarInput" hidden accept="image/*" />
+
+          <h2 id="modalNickname">Profile</h2>
+
+          <p id="modalEmail">user@gmail.com</p>
+        </div>
+
+        <div class="profile-fields">
+          <!-- НІКНЕЙМ -->
+          <div class="profile-field">
+            <label>Новий нік</label>
+
+            <input
+              type="text"
+              id="nicknameInput"
+              placeholder="Введіть новий нік"
+            />
+          </div>
+
+          <!-- ПАРОЛЬ -->
+          <div class="profile-field">
+            <label>Новий пароль</label>
+
+            <input
+              type="password"
+              id="passwordInput"
+              placeholder="Введіть новий пароль"
+            />
+          </div>
+
+          <button class="save-profile-btn" id="saveProfileBtn">
+            Зберегти зміни
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Скрипти -->
+    <script type="module" src="/resources/chat.js"></script>
+    <script type="module" src="main.js"></script>
+    <script type="module" src="comment.js"></script>
+    <script type="module" src="password.js"></script>
+  </body>
+</html>

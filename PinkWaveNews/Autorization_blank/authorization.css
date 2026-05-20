@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe6ee, #ffd1dc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Контейнер авторизації */
+.auth-container {
+    background: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок форми */
+.auth-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #d6336c;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Підзаголовок / опис стану */
+.auth-subtitle {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Перемикач режимів (логін / реєстрація) */
+.mode-switch {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mode-switch button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ff7aa2;
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+    color: #ff7aa2;
+    transition: 0.2s;
+}
+
+.mode-switch button.active {
+    background: #ff7aa2;
+    color: white;
+}
+
+/* Поля форми */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #ff7aa2;
+}
+
+/* Основна кнопка дії */
+.main-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #ff7aa2;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.main-btn:hover {
+    background: #ff5f8f;
+}
+
+.main-btn:active {
+    transform: scale(0.98);
+}
+
+/* Повідомлення про помилку */
+#errorMessage {
+    display: none;
+    color: #d6336c;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Нижній текст (допоміжна інформація) */
+.footer-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Адаптація під мобільні пристрої */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 30px 20px;
+    }
+}
